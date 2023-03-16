@@ -5,11 +5,11 @@ RSpec.describe "verify_text" do
     expect(verify_text("good morning!")).to eq false
   end 
 
-  it "should return true if first letter is cap." do
+  it "should return true if first letter is cap. and there is ponctuation mark" do
     expect(verify_text("Good morning!")).to eq true
   end
 
-  it "should return true if first letter is cap. and there no ponctuation mark" do
+  it "should return false if first letter is cap. and there is no ponctuation mark" do
     expect(verify_text("Are you ok")).to eq false
   end
 
